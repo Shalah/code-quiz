@@ -1,29 +1,64 @@
 //Declare Variables
-//var viewScoresEl = document.querySelector("#view-scores");
+var startEl = document.querySelector("#start");  //Creating a var for the button start
+var timerEl = document.querySelector("#timer");   // creating a var for the timer
 
-//Creating a var for the button start
-var startBtn = document.querySelector(".start");
-var divContent = document.getElementById("removeContentDiv");
+var secondsLeft = 75; //This is the inital time users will start the game with
 
-/*viewScoresEl.addEventListener("click", function() {
-    console.log("It works");
-}) */
 
-//Listening for the click of the button
-document.addEventListener("click", test)
-
-function test(){
-    document.body.style.backgroundColor = "red";
-    removeContentEl();
+//Function to set the timer
+function setTimer(){
+    var timerInterval = setInterval(function(){
+        secondsLeft--;
+        timerEl.textContent = "Time: " + secondsLeft;
+    }, 1000)
 }
 
-function removeContentEl(){
-    divContent.removeChild(divContent)
-}
 
-function myFunction() {
-    var list = document.getElementById("myList");
-    while (list.hasChildNodes()) {
-      list.removeChild(list.firstChild);
-    }
-  }
+startEl.addEventListener("click", function(){        //Listening for the click of the button
+    
+    setTimer();
+    //console.log("test")
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Not working
+//var startBtn = document.querySelector("#start");
+//startBtn.addEventListener("click", test)
+
+// function test(){
+//     console.log("lets see")
+    
+// }
