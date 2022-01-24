@@ -3,14 +3,14 @@ var startEl = document.querySelector("#start");  //Creating a var for the button
 var timerEl = document.querySelector("#timer");   // creating a var for the timer
 var hideQuizEl = document.querySelector(".hide-quiz")  // create a var to hide quiz content
 var secondsLeft = 5; //This is the inital time users will start the game with
-// var removeContentEl = document.querySelectorall(".remove-content-div")  //This is to remove the content right after the button is clicked
+var removeContentEl = document.querySelector(".remove-content-div")  //This is to remove the content right after the button is clicked
 
 //Function to set the timer
 function setTimer(){
     var timerInterval = setInterval(function(){
         secondsLeft--;
         timerEl.textContent = "Time: " + secondsLeft;
-       // removeContent()
+        removeContent()
         displayQuiz();
         if (secondsLeft === 0) {
             clearInterval(timerInterval);  // Stops the timer from going to negative. Takes a parameter that was used for "setInterval"
@@ -25,9 +25,9 @@ function displayQuiz(){
 }
 
 //function to remove the content right after the button is clicked
-// function removeContent(){
-//     removeContentEl.remove();
-// }
+function removeContent(){
+    removeContentEl.remove();
+}
 
 
 startEl.addEventListener("click", function(){        //Listening for the click of the button
