@@ -12,8 +12,8 @@
     text-align: center;
 }
 
-.hide-quiz-1, .hide-quiz-2,
-.hide-quiz-3, .hide-quiz-4, .hide-quiz-5{
+.hide-quiz{
     display: none;
+    
 }
 
