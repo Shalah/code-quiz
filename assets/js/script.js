@@ -1,29 +1,33 @@
 // This is to create a code quiz. 
 
 //Declare Variables
+var body = document.body;
 var startEl = document.querySelector("#start");  //Creating a var for the button start
 var timerEl = document.querySelector("#timer");   // creating a var for the timer
 var secondsLeft = 20; //This is the inital time users will start the game with
 
 
 
-var hideQuizEl1 = document.querySelector(".hide-quiz-1")  // create a var to hide quiz content 1
-var hideQuizEl2 = document.querySelector(".hide-quiz-2")  // create a var to hide quiz content 2
-var hideQuizEl3 = document.querySelector(".hide-quiz-3")  // create a var to hide quiz content 3
-var hideQuizEl4 = document.querySelector(".hide-quiz-4")  // create a var to hide quiz content 4
-var hideQuizEl5 = document.querySelector(".hide-quiz-5")  // create a var to hide quiz content 2
+var hideQuizEl1 = document.querySelector(".hide-quiz-1");  // create a var to hide quiz content 1
+var hideQuizEl2 = document.querySelector(".hide-quiz-2");  // create a var to hide quiz content 2
+var hideQuizEl3 = document.querySelector(".hide-quiz-3");  // create a var to hide quiz content 3
+var hideQuizEl4 = document.querySelector(".hide-quiz-4");  // create a var to hide quiz content 4
+var hideQuizEl5 = document.querySelector(".hide-quiz-5");  // create a var to hide quiz content 2
 
 var removeContentEl = document.querySelector(".remove-content-div")  //This is to remove the content right after the button is clicked
+var removeContentEnd = document.querySelector(".remove-content-End-div")
 
-var rightAnswer1 = document.querySelector(".right-answer-1")   //Var for right answer 1
-var rightAnswer2 = document.querySelector(".right-answer-2")   //Var for right answer 2
-var rightAnswer3 = document.querySelector(".right-answer-3")   //Var for right answer 3
-var rightAnswer4 = document.querySelector(".right-answer-4")   //Var for right answer 4
-var rightAnswer5 = document.querySelector(".right-answer-5")   //Var for right answer 5
+var rightAnswer1 = document.querySelector(".right-answer-1");   //Var for right answer 1
+var rightAnswer2 = document.querySelector(".right-answer-2");   //Var for right answer 2
 
-var wrongAnswer2 = document.querySelector(".wrong-answer-2")   // This is the class for wrong answers
-var wrongAnswer3 = document.querySelector(".wrong-answer-3")   // This is the class for wrong answers
-var wrongAnswer4 = document.querySelector(".wrong-answer-4")   // This is the class for wrong answers
+
+var wrongAnswer2 = document.querySelector(".wrong-answer-2a");   // This is the class for wrong answers
+var wrongAnswer3 = document.querySelector(".wrong-answer-3b");   // This is the class for wrong answers
+var wrongAnswer4 = document.querySelector(".wrong-answer-4c");   // This is the class for wrong answers
+
+var wrongAnswer5 = document.querySelector(".wrong-answer-2d");   // This is the class for wrong answers
+var wrongAnswer6 = document.querySelector(".wrong-answer-3e");   // This is the class for wrong answers
+var wrongAnswer7 = document.querySelector(".wrong-answer-4f");   // This is the class for wrong answers
 
 //var uncorrectAnswer = document.getElementById("#uncorrect-answer")  // This is to output " Wrong answer"
 //uncorrectAnswer.textContent = "Wrong answer!!"
@@ -59,75 +63,59 @@ function displayQuiz2(){
     hideQuizEl2.style.display = "block";
 } 
 
-//Function to call the third quiz
-function displayQuiz3(){
-    hideQuizEl3.style.display = "block";
-} 
 
-//Function to call the fourth quiz
-function displayQuiz4(){
-    hideQuizEl4.style.display = "block";
-} 
-
-//Function to call the fifth quiz
-function displayQuiz5(){
-    hideQuizEl5.style.display = "block";
-} 
 
 wrongAnswer2.addEventListener("click", function(){
     hideQuizEl1.remove();
-    // alert("Wrong Answer");
+    console.log("Wrong Answer");
     displayQuiz2();
 })
 
 wrongAnswer3.addEventListener("click", function(){
     hideQuizEl1.remove();
-    // alert("Wrong Answer");
+    console.log("Wrong Answer");
     displayQuiz2();
 })
 
 wrongAnswer4.addEventListener("click", function(){
     hideQuizEl1.remove();
-    // alert("Wrong Answer");
+    console.log("Wrong Answer");
     displayQuiz2();
 })
+
+// wrongAnswer5.addEventListener("click", function(){
+//     hideQuizEl2.remove();
+//     console.log("Wrong Answer");
+//     displayQuiz3();
+// })
+
+// wrongAnswer6.addEventListener("click", function(){
+//     hideQuizEl2.remove();
+//     console.log("Wrong Answer");
+//     displayQuiz3();
+// })
+
+// wrongAnswer7.addEventListener("click", function(){
+//     hideQuizEl2.remove();
+//     console.log("Wrong Answer");
+//     displayQuiz3();
+// })
 
 rightAnswer1.addEventListener("click", function(){
     //console.log("Right answer")
     hideQuizEl1.remove();
-    alert("Right Answer");
+    console.log("Right Answer");
     displayQuiz2();
 })
-
 
 rightAnswer2.addEventListener("click", function(){
     //console.log("Right answer")
     hideQuizEl2.remove();
-    alert("Right Answer")
-    displayQuiz3();
+    console.log("Right Answer");
+    removeContentEnd .style.display = "block";
 })
 
 
-
-rightAnswer3.addEventListener("click", function(){
-    //console.log("Right answer")
-    hideQuizEl3.remove();
-    alert("Right Answer")
-    displayQuiz4();
-})
-
-rightAnswer4.addEventListener("click", function(){
-    //console.log("Right answer")
-    hideQuizEl4.remove();
-    alert("Right Answer")
-    displayQuiz5();
-})
-
-rightAnswer5.addEventListener("click", function(){
-    //console.log("Right answer")
-    hideQuizEl5.remove();
-    alert("Right Answer")
-})
 
 /*This is to display the user picked the right answer
 function UserAnswer(){
@@ -146,6 +134,9 @@ function removeContent(){
     removeContentEl.remove();
 }
 
+function addContent(){
+    
+}
 
 
 startEl.addEventListener("click", function(){        //Listening for the click of the button

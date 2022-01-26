@@ -16,3 +16,11 @@
     display: none;
 }
 
+.remove-content-End-div{
+    display: none;
+}
+
+a, a:link, a:visited, a:focus, a:hover, a:active{ 
+    text-decoration: none;
+    text-decoration-color: none;
+}
