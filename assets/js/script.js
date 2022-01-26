@@ -37,27 +37,40 @@ function setTimer(){
 
 
 
+let i = 0;
 
 function loopingQuestions(){
-    for (let i=0; i < questionsEl.length; i++) {
+    
+    while (i < questionsEl.length) {
+    
         //console.log (questionsEl[i])
 
         var begin = questionsEl[i];
-        //begin.style.display = 'block';
-        
+        begin.style.display = 'block';
+
+        rightAnswer.addEventListener ('click', function(){
+            //console.log('Right answer');
+            //correctAnswerEl[i].style.display = 'block';
+            begin.style.display = 'none';
+            
+        })
+
+        i++;
     }
     
 }
 
+/*
+function test(){
+    rightAnswer.addEventListener ('click', function(){
+        console.log('Right answer');
+        correctAnswerEl.style.display = 'block';
+        begin.style.display = 'none';
+        i++;
+    })
+}
 
-
-rightAnswer.addEventListener ('click', function(){
-    console.log('Right answer');
-    correctAnswerEl.style.display = 'block';
-    begin.style.display = 'none';
-    i++;
-})
-
+*/
 
 
 startEl.addEventListener("click", function(){        //Listening for the click of the button
@@ -88,79 +101,14 @@ startEl.addEventListener("click", function(){        //Listening for the click o
 
 
 
+// Not working
+//var startBtn = document.querySelector("#start");
+//startBtn.addEventListener("click", test)
 
-
-
-
-
-
-
-
-
-
-
-
-
-//function to remove the content right after the button is clicked
-// I can simplify this by deleting the function and just call this "removeContentEl.remove();" 
-/*
-function removeContent(){
+// function test(){
+//     console.log("lets see")
     
-}
-
-
-
-
-//Function to call the first quiz
-function displayQuiz1(){
-    hideQuizEl1.style.display = "block";
-}
-
-*/
-
-
-
-
-
-
-
-
-// rightAnswer1.addEventListener("click", function(){
-//     //console.log("Right answer")
-//     hideQuizEl1.remove();
-//     alert("Right Answer")
-//     displayQuiz2();
-// })
-
-
-/*This is to display the user picked the right answer
-function UserAnswer(){
-    if (rightAnswer1 === "click"){
-        alert("Right Answer")
-    }
-    // else {
-    //     alert("Wrong answer")
-    // }
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// }
 
 
 
