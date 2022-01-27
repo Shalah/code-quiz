@@ -5,5 +5,5 @@ This is a code quiz page. Basically, the user has to answer a set of questions a
  
 ## Deployment
 
-The application is displayed with GitHub pages [here](linkhere)
+The application is displayed with GitHub pages [here]( https://shalah.github.io/code-quiz/)
 
