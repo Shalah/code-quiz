@@ -2,6 +2,17 @@
     text-align: center;
 }
 
+.styling{
+    font-size: 40px;
+}
+
+
+body{
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
 #timer{
     text-align: left;
     color: blue;

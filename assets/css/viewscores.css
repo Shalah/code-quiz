@@ -3,3 +3,11 @@ h1{
     color: blue;
     margin-top: 100px;
 }
+
+#btn-1{
+    margin-right: 5px;
+}
+
+#btn-2{
+    margin-left: 5px;
+}
